@@ -1,27 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500&family=Lato&family=Montserrat:wght@800&family=Outfit:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  body {
+    @apply bg-brand-black-900 text-white;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  h1 {
+    @apply text-5xl lg:text-8xl;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-3xl;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.btn-gradient {
+  @apply bg-gradient-to-r from-[#31C1E1] from-0% to-[#B24FFF] to-100% hover:opacity-80 transition-all duration-300 rounded-lg;
+}
+
+.box-gradient {
+  @apply bg-gradient-to-r from-[#232a3d] from-0% to-[#2126340f] to-100% border border-brand-border rounded-xl;
 }
