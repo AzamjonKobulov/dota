@@ -19,14 +19,16 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState('-translate-y-full');
   const [scrolling, setScrolling] = useState(false);
 
+  const handleScroll = () => {
+    if (window.scrollY > 80) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  };
+
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 80) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
+    handleScroll();
 
     window.addEventListener('scroll', handleScroll);
 

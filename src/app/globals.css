@@ -34,12 +34,6 @@
   @apply bg-gradient-to-r from-[#31C1E1] from-0% to-[#B24FFF] to-100% rounded-xl;
 }
 
-.border-gradient {
-  border-width: 2px;
-  border-image: linear-gradient(to right, #31c1e1, #b24fff);
-  border-image-slice: 1;
-}
-
 .box-gradient {
   @apply bg-gradient-to-r from-[#232a3d] from-0% to-[#2126340f] to-100% border border-brand-border rounded-xl;
 }

@@ -1,5 +1,6 @@
 import AbilityDetails from '../AbilityDetails';
 import AttributesAndStats from '../AttributesAndStats';
+import HeroesNavigation from '../HeroesNavigation';
 
 const Info = () => {
   return (
@@ -7,6 +8,7 @@ const Info = () => {
       <div className="max-w-base mx-auto space-y-60 md:space-y-120 lg:px-5">
         <AttributesAndStats />
         <AbilityDetails />
+        <HeroesNavigation />
       </div>
     </div>
   );
