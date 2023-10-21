@@ -28,6 +28,10 @@ module.exports = {
           },
         },
       },
+      spacing: {
+        60: '3.75rem',
+        120: '7.5rem',
+      },
     },
   },
   plugins: [],
