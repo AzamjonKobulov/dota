@@ -122,7 +122,7 @@ const AbilityDetails = () => {
               key={idx}
               className={`${
                 idx === 0
-                  ? 'ml-24 md:ml-5 lg:ml-0'
+                  ? 'ml-[5rem] md:ml-5 lg:ml-0'
                   : idx === 4
                   ? 'mr-5 lg:mr-0'
                   : ''
