@@ -109,6 +109,7 @@ const abilities = [
 
 const AbilityDetails = () => {
   const [activeAbl, setActiveAbl] = useState(0);
+  const activeAbility = abilities[activeAbl];
 
   return (
     <div className="flex flex-col lg:flex-row gap-10 md:gap-[3.125rem]">
@@ -129,6 +130,7 @@ const AbilityDetails = () => {
               } ${
                 activeAbl === idx ? 'btn-tab-gradient' : ''
               } w-20 md:w-[15.25rem] lg:w-full shrink-0 p-px rounded-xl`}
+              onClick={() => setActiveAbl(idx)}
             >
               <div className="bg-brand-dark w-full h-full rounded-xl">
                 <div className="box-gradient w-full h-full inline-flex md:flex flex-col md:flex-row items-center gap-3 md:gap-4 text-xs md:text-lg font-medium font-archivo p-3 md:p-4">
@@ -153,7 +155,7 @@ const AbilityDetails = () => {
           <div className="flex flex-col md:flex-row gap-6 pb-8 border-b border-white/10">
             <div className="w-[7.5rem] h-[7.5rem] shrink-0 overflow-hidden rounded-lg">
               <Image
-                src="/assets/images/img-ability-1.png"
+                src={activeAbility.ablImage}
                 alt="Ability"
                 width={120}
                 height={120}
@@ -161,11 +163,9 @@ const AbilityDetails = () => {
               />
             </div>
             <div className="space-y-2">
-              <h3>Mist Coil</h3>
+              <h3>{activeAbility.ablName}</h3>
               <p className="font-archivo text-brand-black-200">
-                Abaddon releases a coil of deathly mist that can damage an enemy
-                unit or heal a friendly unit at the cost of some of
-                Abaddon&apos;s health.
+                {activeAbility.ablInfo.text}
               </p>
             </div>
           </div>
@@ -178,9 +178,11 @@ const AbilityDetails = () => {
                   <p>DAMAGE TYPE:</p>
                 </div>
                 <div className="space-y-[0.8125rem] font-medium">
-                  <p>Unit Target</p>
-                  <p>Heroes</p>
-                  <p className="text-[#4FAEC0]">Magical</p>
+                  <p>{activeAbility.ablInfo.ability}</p>
+                  <p>{activeAbility.ablInfo.affects}</p>
+                  <p className="text-[#4FAEC0]">
+                    {activeAbility.ablInfo.demage}
+                  </p>
                 </div>
               </div>
               <div className="flex gap-2">
@@ -190,9 +192,7 @@ const AbilityDetails = () => {
                   </p>
                 </div>
                 <div className="space-y-[0.8125rem] font-medium">
-                  <p>
-                    Allies Yes <br /> Enemies No
-                  </p>
+                  <p>{activeAbility.ablInfo.pierces}</p>
                 </div>
               </div>
             </div>
@@ -204,9 +204,9 @@ const AbilityDetails = () => {
                   <p>CAST RANGE:</p>
                 </div>
                 <div className="space-y-[0.8125rem] font-medium">
-                  <p>40.0%</p>
-                  <p>100.0 / 175.0 / 250.0 / 325.0</p>
-                  <p>600.0 / 625.0 / 650.0 / 675.0</p>
+                  <p>{activeAbility.ablInfo.self}</p>
+                  <p>{activeAbility.ablInfo.heal}</p>
+                  <p>{activeAbility.ablInfo.cast}</p>
                 </div>
               </div>
             </div>
@@ -219,16 +219,15 @@ const AbilityDetails = () => {
                 width={24}
                 height={24}
               />
-              <p>6.5 / 6.0 / 5.5 / 5.0</p>
+              <p>{activeAbility.ablInfo.leftNumber}</p>
             </div>
             <div className="flex items-center gap-2">
               <div className="blue-gradient w-6 h-6 rounded"></div>
-              <p>50</p>
+              <p>{activeAbility.ablInfo.rightNumber}</p>
             </div>
           </div>
           <div className="box-gradient font-archivo py-4 px-6">
-            A mysterious vapor from the Font of Avernus now infuses the breath
-            of Abaddon, who releases it at will.
+            {activeAbility.ablInfo.additional}
           </div>
         </div>
       </div>
