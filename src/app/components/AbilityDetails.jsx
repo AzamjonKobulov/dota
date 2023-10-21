@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 
 import Image1 from '/public/assets/images/img-ability-1.png';
@@ -105,6 +108,8 @@ const abilities = [
 ];
 
 const AbilityDetails = () => {
+  const [activeAbl, setActiveAbl] = useState(0);
+
   return (
     <div className="flex flex-col lg:flex-row gap-10 md:gap-[3.125rem]">
       <div className="lg:w-[21.875rem] space-y-6 md:space-y-60">
@@ -121,6 +126,8 @@ const AbilityDetails = () => {
                   : idx === 4
                   ? 'mr-5 lg:mr-0'
                   : ''
+              } ${
+                activeAbl === idx ? 'btn-tab-gradient' : ''
               } w-20 md:w-[15.25rem] lg:w-full shrink-0 p-px rounded-xl`}
             >
               <div className="bg-brand-dark w-full h-full rounded-xl">

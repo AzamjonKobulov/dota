@@ -26,6 +26,10 @@
   @apply bg-gradient-to-r from-[#31C1E1] from-0% to-[#B24FFF] to-100% hover:bg-gradient-to-bl  transition-colors duration-300 rounded-lg;
 }
 
+.btn-tab-gradient {
+  @apply bg-gradient-to-r from-[#31C1E1] from-0% to-[#B24FFF] to-100%;
+}
+
 .tab-gradient {
   @apply bg-gradient-to-r from-[#31C1E1] from-0% to-[#B24FFF] to-100% rounded-xl;
 }
