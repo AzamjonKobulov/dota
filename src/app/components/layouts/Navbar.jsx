@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed inset-x-0 z-50 ${
+      className={`fixed inset-x-0 border border-transparent z-50 ${
         scrolling ? 'box-gradient !rounded-none bg-brand-dark/95' : ''
       }`}
     >

@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const AttributesAndStats = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-6 md:gap-7 leading-5">
+    <div className="flex flex-col md:flex-row gap-6 md:gap-7 leading-5 px-5 lg:px-0">
       <div className="box-gradient md:w-1/2 lg:w-[29.375rem] space-y-6 py-6 px-4 md:py-6 md:px-8">
         <h4 className="text-lg">ATTRIBUTES</h4>
         <div className="space-y-4">

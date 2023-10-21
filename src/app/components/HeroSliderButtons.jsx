@@ -1,7 +1,7 @@
 const HeroSliderButtons = () => {
   return (
     <div className="flex items-center justify-center gap-4 relative z-10 mt-8 xl:mt-0 pb-8 md:pb-6">
-      <button className="btn-prev w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#ffffff1a] grid place-content-center">
+      <button className="btn-prev w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 grid place-content-center">
         <svg
           width="24"
           height="24"
@@ -15,7 +15,7 @@ const HeroSliderButtons = () => {
           />
         </svg>
       </button>
-      <button className="btn-next w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#ffffff1a] grid place-content-center">
+      <button className="btn-next w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 grid place-content-center">
         <svg
           width="24"
           height="24"

@@ -23,7 +23,7 @@
 }
 
 .btn-gradient {
-  @apply bg-gradient-to-r from-[#31C1E1] from-0% to-[#B24FFF] to-100% hover:bg-gradient-to-l transition-all duration-300 rounded-lg;
+  @apply bg-gradient-to-r from-[#31C1E1] from-0% to-[#B24FFF] to-100% hover:bg-gradient-to-bl  transition-colors duration-300 rounded-lg;
 }
 
 .tab-gradient {
@@ -46,4 +46,8 @@
 
 .blue-gradient {
   @apply bg-gradient-to-r from-[#1761DE] from-0% to-[#3590D1] to-100%;
+}
+
+.no-scroll::-webkit-scrollbar {
+  height: 0px; /* Set the height of the scrollbar */
 }
