@@ -151,7 +151,7 @@ const AbilityDetails = () => {
         </div>
       </div>
       <div className="flex-1 px-5 lg:px-0">
-        <div className=" bg-brand-dark rounded-xl space-y-8 px-4 py-8 md:px-8">
+        <div className="bg-brand-dark rounded-xl space-y-8 relative z-10 px-4 py-8 md:px-8">
           <div className="flex flex-col md:flex-row gap-6 pb-8 border-b border-white/10">
             <div className="w-[7.5rem] h-[7.5rem] shrink-0 overflow-hidden rounded-lg">
               <Image
